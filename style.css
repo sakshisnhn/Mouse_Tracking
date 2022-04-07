@@ -1,0 +1,212 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: copy;
+  }
+  .canvas {
+    width: 100vmin;
+    height: 100vmin;
+    background: rgba(255, 0, 0, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .tracker {
+    flex-basis: 33.3333%;
+    background: #879bad;
+    height: 33.3333%;
+  }
+  
+  .bender {
+    position: absolute;
+    width: 30vmin;
+    height: 30vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #879bad;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bender .eyes {
+    background: black;
+    width: 30vmin;
+    height: 10vmin;
+    border-radius: 10vmin;
+    position: relative;
+  }
+  
+  .bender .eyes:before {
+    content: " ";
+    position: absolute;
+    width: 31vmin;
+    height: 11.1vmin;
+    border-radius: 10vmin;
+    border: 0.5vmin solid black;
+    left: -1vmin;
+    top: -1vmin;
+  }
+  
+  .bender .eyes .lids .eye {
+    background: #fdfab6;
+    border-radius: 50%;
+    width: 10vmin;
+    height: 10vmin;
+    margin: 1vmin;
+    position: relative;
+  }
+  
+  .bender .eyes .lids {
+    height: 8vmin;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: height 0.5s;
+  }
+  
+  .bender .eyes .lids .eye:before {
+    width: 1.5vmin;
+    height: 1.5vmin;
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s;
+    background: black;
+  }
+  
+  .tracker:nth-child(1):hover ~ .bender .eyes .lids .eye:before {
+    transform: translate(-150%, -150%);
+  }
+  
+  .tracker:nth-child(2):hover ~ .bender .eyes .lids .eye:before {
+    transform: translate(-50%, -150%);
+  }
+  
+  .tracker:nth-child(3):hover ~ .bender .eyes .lids .eye:before {
+    transform: translate(100%, -150%);
+  }
+  
+  .tracker:nth-child(4):hover ~ .bender .eyes .lids .eye:before {
+    transform: translate(-150%, -50%);
+  }
+  
+  .tracker:nth-child(5):hover ~ .bender .eyes .lids {
+    height: 4vmin;
+  }
+  
+  .bender:hover .eyes .lids {
+    height: 4vmin;
+  }
+  
+  .tracker:nth-child(6):hover ~ .bender .eyes .lids .eye:before {
+    transform: translate(100%, -50%);
+  }
+  
+  .tracker:nth-child(7):hover ~ .bender .eyes .lids .eye:before {
+    transform: translate(-150%, 100%);
+  }
+  
+  .tracker:nth-child(8):hover ~ .bender .eyes .lids .eye:before {
+    transform: translate(-50%, 100%);
+  }
+  
+  .tracker:nth-child(9):hover ~ .bender .eyes .lids .eye:before {
+    transform: translate(100%, 100%);
+  }
+  
+  .tracker:nth-child(1):active ~ .bender .eyes .lids .eye:before {
+    transform: translate(-150%, -150%);
+  }
+  
+  .tracker:nth-child(2):active ~ .bender .eyes .lids .eye:before {
+    transform: translate(-50%, -150%);
+  }
+  
+  .tracker:nth-child(3):active ~ .bender .eyes .lids .eye:before {
+    transform: translate(0%, -150%);
+  }
+  
+  .tracker:nth-child(4):active ~ .bender .eyes .lids .eye:before {
+    transform: translate(-150%, -50%);
+  }
+  
+  .tracker:nth-child(5):active ~ .bender .eyes .lids {
+    height: 4vmin;
+  }
+  
+  .bender:active .eyes .lids {
+    height: 4vmin;
+  }
+  
+  .tracker:nth-child(6):active ~ .bender .eyes .lids .eye:before {
+    transform: translate(100%, -50%);
+  }
+  
+  .tracker:nth-child(7):active ~ .bender .eyes .lids .eye:before {
+    transform: translate(-150%, 100%);
+  }
+  
+  .tracker:nth-child(8):active ~ .bender .eyes .lids .eye:before {
+    transform: translate(-50%, 100%);
+  }
+  
+  .tracker:nth-child(9):active ~ .bender .eyes .lids .eye:before {
+    transform: translate(100%, 100%);
+  }
+  
+  .bender .mouth {
+    width: 20vmin;
+    height: 8vmin;
+    background: #fdfab6;
+    margin-top: 4vmin;
+    border: 0.75vmin solid black;
+    border-radius: 10vmin;
+    overflow: hidden;
+    transition: height 0.5s;
+    position: relative;
+  }
+  
+  .bender .mouth .teethrow {
+    height: 2vmin;
+    width: 25vmin;
+    border: 0.01vmin solid black;
+    position: relative;
+    left: -2.5vmin;
+  }
+  
+  .bender .mouth .teethcolset {
+    display: flex;
+    width: 30vmin;
+  }
+  
+  .bender .mouth .teethcolset .teethcol {
+    height: 15vmin;
+    flex-basis: 2vmin;
+    border: 0.01vmin solid black;
+    position: relative;
+    left: -2.5vmin;
+    position: relative;
+    top: -10vmin;
+  }
+  
+  .bender:hover .mouth {
+    height: 4vmin;
+  }
+  
+  .bender:active .mouth {
+    height: 4vmin;
+  }
+  
